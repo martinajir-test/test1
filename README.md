@@ -1,10 +1,16 @@
-test
-# Update made by branch feature-branch-8
+# test1
 
-test
+A test repository for development and testing purposes.
 
+## Description
 
-mergeable
+This is a test repository used for experimenting with Git workflows, branch management, and other development practices.
 
+## Contents
 
-test
+- `README.md` - This file
+- `test.md` - Additional test documentation
+
+## Usage
+
+This repository is primarily used for testing and development purposes.
