@@ -43,6 +43,4 @@ jobs:
 
       # Run integration tests
       - name: Run integration tests
-        run: |
-          chmod +x tests/integration_test.sh
-          ./tests/integration_test.sh
+        run: ./tests/integration_test.sh

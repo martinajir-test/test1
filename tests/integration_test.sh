@@ -77,11 +77,11 @@ else
 fi
 
 # Test 7: Validate test.md has proper markdown header
-echo "Test 7: Checking if test.md has markdown header..."
+echo "Test 7: Checking if test.md has level 2 markdown header..."
 if grep -q "^##" "test.md"; then
-    pass_test "test.md has markdown header"
+    pass_test "test.md has level 2 markdown header"
 else
-    fail_test "test.md does not have markdown header"
+    fail_test "test.md does not have level 2 markdown header"
 fi
 
 # Summary
