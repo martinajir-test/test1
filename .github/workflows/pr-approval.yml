@@ -1,0 +1,17 @@
+name: PR Approval Required
+
+# Trigger on all pull request events
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  approval-required:
+    runs-on: ubuntu-latest
+    # Use an environment to require approval
+    # Note: The environment 'pr-approval' needs to be configured in repository settings
+    # with required reviewers to actually require approval before running
+    environment: pr-approval
+    steps:
+      - name: Simple check
+        run: echo "This workflow requires approval to run on PRs"
