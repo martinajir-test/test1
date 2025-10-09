@@ -36,7 +36,6 @@
             color: #555;
             font-weight: bold;
         }
-        input[type="text"],
         input[type="email"],
         input[type="password"] {
             width: 100%;
@@ -46,7 +45,6 @@
             font-size: 1rem;
             box-sizing: border-box;
         }
-        input[type="text"]:focus,
         input[type="email"]:focus,
         input[type="password"]:focus {
             outline: none;
@@ -107,9 +105,8 @@
             
             // Basic validation
             if (email && password) {
-                alert('Sign in successful! Welcome, ' + email);
+                alert('Sign in successful! Welcome!');
                 // In a real application, this would send credentials to a server
-                console.log('Sign in attempt with:', { email: email });
             } else {
                 alert('Please fill in all fields');
             }
