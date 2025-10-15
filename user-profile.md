@@ -37,4 +37,4 @@ A brief description about the user goes here.
 - Interest 3
 
 ---
-*Last Updated: 2025-10-15*
+*Last Updated: [Date]*
