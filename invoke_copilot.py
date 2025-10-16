@@ -26,15 +26,13 @@ def generate_factorial_function():
     Simulated Copilot response for factorial function.
     In a real implementation, this would call the GitHub Copilot API.
     """
-    return """
-def factorial(n):
-    '''Calculate the factorial of a number.'''
+    return """def factorial(n):
+    \"\"\"Calculate the factorial of a number.\"\"\"
     if n < 0:
         raise ValueError("Factorial is not defined for negative numbers")
     if n == 0 or n == 1:
         return 1
-    return n * factorial(n - 1)
-"""
+    return n * factorial(n - 1)"""
 
 
 if __name__ == "__main__":
