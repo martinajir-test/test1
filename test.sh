@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Simple test script
 echo "Running tests..."
