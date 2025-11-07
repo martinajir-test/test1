@@ -1,3 +1,3 @@
 ## Test
 
-I am a a;iuesgri ;ausgbf i;uasd
+This is a test markdown file for demonstrating repository content.
