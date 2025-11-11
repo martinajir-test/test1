@@ -11,5 +11,5 @@ test
 asdfasf
 
 ## Thread
-a new message
-request
+- a new message
+- request
