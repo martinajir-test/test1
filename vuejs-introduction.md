@@ -157,7 +157,7 @@ Using CDN (for simple projects):
 ## Resources
 
 - **Official Website**: [vuejs.org](https://vuejs.org)
-- **Official Documentation**: [vuejs.org/guide](https://vuejs.org/guide/introduction.html)
+- **Official Documentation**: [Documentation](https://vuejs.org/guide/introduction.html)
 - **GitHub Repository**: [github.com/vuejs/core](https://github.com/vuejs/core)
 - **Community Forum**: [forum.vuejs.org](https://forum.vuejs.org)
 
