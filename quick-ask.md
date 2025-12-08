@@ -24,9 +24,9 @@ Have a quick question? Here's how to get help fast!
 ## Getting Started
 
 To submit a quick ask:
-1. Go to the [Issues](../../issues) page
+1. Go to the Issues page
 2. Click "New Issue"
 3. Add the `quick-ask` label
 4. Submit your question!
 
-We aim to respond to quick asks within 24 hours.
+Our goal is to respond to quick asks within 24 hours when possible.
