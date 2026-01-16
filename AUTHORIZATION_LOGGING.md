@@ -57,11 +57,26 @@ pip install -r requirements.txt
 
 ### Running the Application
 
+For development/demonstration:
 ```bash
+# Enable debug mode for development
+export FLASK_DEBUG=true
 python app.py
 ```
 
+For production:
+```bash
+# Run without debug mode (default)
+python app.py
+
+# Or use a production WSGI server like gunicorn
+pip install gunicorn
+gunicorn -w 4 -b 0.0.0.0:5000 app:app
+```
+
 The server starts on `http://localhost:5000`.
+
+⚠️ **Security Note**: Never run Flask with `debug=True` in production. Use a production WSGI server like gunicorn, uWSGI, or waitress.
 
 ### Testing Authorization
 

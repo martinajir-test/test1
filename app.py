@@ -217,4 +217,9 @@ def handle_403(e):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    # Note: debug=True is for development/demonstration only
+    # In production, set debug=False and use a production WSGI server
+    import os
+    debug_mode = os.environ.get('FLASK_DEBUG', 'false').lower() == 'true'
+    app.run(debug=debug_mode, port=5000)
+
