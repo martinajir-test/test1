@@ -43,7 +43,9 @@ The implementation handles and logs:
 
 - **app.py**: Main Flask application with authorization middleware and logging
 - **test_authorization.py**: Comprehensive test suite validating logging behavior
+- **demo_logging.py**: Interactive demonstration script showing logging in action
 - **requirements.txt**: Python dependencies
+- **AUTHORIZATION_LOGGING.md**: This documentation file
 
 ## Installation
 
@@ -103,6 +105,22 @@ Or with unittest:
 ```bash
 python test_authorization.py
 ```
+
+## Interactive Demonstration
+
+To see the 403 logging in action with various scenarios:
+
+1. Start the Flask application in one terminal:
+```bash
+python app.py
+```
+
+2. In another terminal, run the demo script:
+```bash
+python demo_logging.py
+```
+
+The demo script will trigger various 403 scenarios and show you the responses. Watch the Flask app's terminal output to see the detailed logging for each 403 error.
 
 ## User Permissions
 
