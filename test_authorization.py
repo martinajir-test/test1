@@ -175,6 +175,50 @@ class TestLogFunctionDirectly(unittest.TestCase):
         self.assertIn('/test/resource', log_output)
         self.assertIn('test_permission', log_output)
         self.assertIn('Test reason', log_output)
+    
+    def test_log_injection_prevention(self):
+        """Test that newlines and control characters are sanitized to prevent log injection."""
+        # Attempt log injection with newlines and fake log entries
+        malicious_user_id = "attacker\n2026-01-16 - FAKE - Unauthorized access granted"
+        malicious_reason = "Test\rMalicious\nlog\ninjection"
+        
+        log_403_error(
+            user_id=malicious_user_id,
+            resource='/api/data',
+            required_permission='read',
+            reason=malicious_reason,
+            extra_context=None
+        )
+        
+        log_output = self.log_capture.getvalue()
+        
+        # Verify newlines are escaped, not actual newlines in output
+        self.assertIn('\\n', log_output)
+        self.assertIn('\\r', log_output)
+        # Ensure the malicious fake log entry doesn't appear as a real separate log line
+        self.assertNotIn('\n2026-01-16 - FAKE', log_output)
+        # Verify the sanitized user ID is present
+        self.assertIn('attacker', log_output)
+    
+    def test_long_input_truncation(self):
+        """Test that excessively long inputs are truncated to prevent log flooding."""
+        # Create a very long user ID
+        long_user_id = 'A' * 2000
+        
+        log_403_error(
+            user_id=long_user_id,
+            resource='/api/data',
+            required_permission='read',
+            reason='Test reason',
+            extra_context=None
+        )
+        
+        log_output = self.log_capture.getvalue()
+        
+        # Verify it was truncated
+        self.assertIn('[truncated]', log_output)
+        # Verify it doesn't contain the full 2000 characters
+        self.assertNotIn('A' * 2000, log_output)
 
 
 if __name__ == '__main__':

@@ -159,14 +159,34 @@ Interactive demonstration script that:
 ## Security Considerations
 
 ⚠️ **Important**: Logs contain sensitive information
-- User IDs and IP addresses are logged
-- Implement proper log file permissions
-- Use log rotation to manage log file sizes
-- Consider log retention policies
-- Sanitize any user input before logging
-- Never log passwords or authentication tokens
-- Review logs regularly for security incidents
-- Comply with privacy regulations (GDPR, etc.)
+
+### Log Injection Prevention (Added for Security)
+The implementation includes **comprehensive sanitization** to prevent log injection attacks:
+
+1. **`sanitize_for_logging()` function** (lines 28-47 in app.py):
+   - Escapes newlines (`\n` → `\\n`) and carriage returns (`\r` → `\\r`)
+   - Removes control characters that could manipulate terminals
+   - Truncates excessively long inputs to prevent log flooding
+   - Maximum length limits: user_id (100), resource (200), reason (500), etc.
+
+2. **All user inputs are sanitized**:
+   - User IDs, resource names, permissions, reasons
+   - Request paths, User-Agent headers, IP addresses
+   - Extra context is validated as proper JSON
+
+3. **Validated with tests**:
+   - `test_log_injection_prevention()` - Tests newline and control character escaping
+   - `test_long_input_truncation()` - Tests length limiting
+
+### Best Practices
+- User IDs and IP addresses are logged - **secure your log files**
+- Implement proper **log file permissions** (e.g., 600 or 640)
+- Use **log rotation** to manage log file sizes
+- Consider **log retention policies** based on compliance needs
+- Sanitize any user input before logging (✅ already implemented!)
+- Never log passwords or authentication tokens (✅ not logged)
+- Review logs regularly for **security incidents**
+- Comply with **privacy regulations** (GDPR, CCPA, etc.)
 
 ## Performance Impact
 

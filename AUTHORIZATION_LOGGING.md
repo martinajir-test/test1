@@ -180,8 +180,25 @@ To add logging to your own application:
 
 ## Security Considerations
 
-- Logs include sensitive information (user IDs, IPs) - secure your log files
-- Consider log rotation and retention policies
-- Sanitize any user input before logging
-- Don't log passwords or tokens
-- Review logs regularly for security incidents
+### Log Injection Prevention
+This implementation includes **built-in sanitization** to prevent log injection attacks:
+- **Newlines and carriage returns** are escaped (`\n`, `\r`) to prevent fake log entries
+- **Control characters** are removed to prevent terminal manipulation
+- **Input length** is limited (1000 chars default) to prevent log flooding
+- **Extra context** is validated as proper JSON to prevent injection
+- All user-provided inputs are sanitized before logging
+
+### Best Practices
+- Logs include sensitive information (user IDs, IPs) - **secure your log files**
+- Implement proper **log file permissions** (e.g., 600 or 640)
+- Use **log rotation** to manage log file sizes
+- Consider **log retention policies** based on compliance needs
+- Review logs regularly for **security incidents**
+- Comply with **privacy regulations** (GDPR, CCPA, etc.)
+
+### What NOT to Log
+- ❌ Passwords or authentication tokens
+- ❌ Credit card numbers or PII
+- ❌ Session tokens or API keys
+- ❌ Full request bodies with sensitive data
+- ✅ Only metadata needed for debugging authorization

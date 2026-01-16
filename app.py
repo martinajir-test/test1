@@ -6,6 +6,8 @@ import logging
 from functools import wraps
 from flask import Flask, request, jsonify
 from datetime import datetime, timezone
+import json
+import re
 
 # Configure logging
 logging.basicConfig(
@@ -24,9 +26,40 @@ USERS = {
 }
 
 
+def sanitize_for_logging(value, max_length=1000):
+    """
+    Sanitize user-provided values to prevent log injection attacks.
+    
+    Args:
+        value: The value to sanitize
+        max_length: Maximum allowed length for the value
+    
+    Returns:
+        Sanitized string safe for logging
+    """
+    if value is None:
+        return 'None'
+    
+    # Convert to string
+    str_value = str(value)
+    
+    # Truncate if too long to prevent log flooding
+    if len(str_value) > max_length:
+        str_value = str_value[:max_length] + '...[truncated]'
+    
+    # Remove or escape newlines and carriage returns to prevent log injection
+    str_value = str_value.replace('\n', '\\n').replace('\r', '\\r')
+    
+    # Remove other control characters except tab
+    str_value = re.sub(r'[\x00-\x08\x0b-\x0c\x0e-\x1f\x7f]', '', str_value)
+    
+    return str_value
+
+
 def log_403_error(user_id, resource, required_permission, reason, extra_context=None):
     """
     Comprehensive logging function for 403 authorization errors.
+    Uses sanitization to prevent log injection attacks.
     
     Args:
         user_id: The identifier of the user attempting the action
@@ -35,31 +68,48 @@ def log_403_error(user_id, resource, required_permission, reason, extra_context=
         reason: Detailed reason for the authorization failure
         extra_context: Additional context information (dict)
     """
+    # Sanitize all user-provided inputs
+    safe_user_id = sanitize_for_logging(user_id, max_length=100)
+    safe_resource = sanitize_for_logging(resource, max_length=200)
+    safe_permission = sanitize_for_logging(required_permission, max_length=100)
+    safe_reason = sanitize_for_logging(reason, max_length=500)
+    
     log_data = {
         'timestamp': datetime.now(timezone.utc).isoformat(),
         'error_type': '403_FORBIDDEN',
-        'user_id': user_id,
-        'resource': resource,
-        'required_permission': required_permission,
-        'reason': reason,
-        'request_method': request.method,
-        'request_path': request.path,
-        'request_remote_addr': request.remote_addr,
-        'request_user_agent': request.headers.get('User-Agent', 'Unknown'),
+        'user_id': safe_user_id,
+        'resource': safe_resource,
+        'required_permission': safe_permission,
+        'reason': safe_reason,
+        'request_method': sanitize_for_logging(request.method, max_length=10),
+        'request_path': sanitize_for_logging(request.path, max_length=500),
+        'request_remote_addr': sanitize_for_logging(request.remote_addr, max_length=50),
+        'request_user_agent': sanitize_for_logging(
+            request.headers.get('User-Agent', 'Unknown'), 
+            max_length=200
+        ),
     }
     
     if extra_context:
-        log_data['extra_context'] = extra_context
+        # Sanitize extra context by converting to JSON and back
+        # This ensures it's safe and properly structured
+        try:
+            safe_extra_context = json.loads(json.dumps(extra_context))
+            log_data['extra_context'] = safe_extra_context
+        except (TypeError, ValueError):
+            log_data['extra_context'] = {'error': 'Could not serialize extra_context'}
     
-    # Log the 403 error with all relevant context
+    # Log the 403 error with all relevant context (using sanitized values)
     logger.warning(
-        f"403 AUTHORIZATION DENIED - User: {user_id}, Resource: {resource}, "
-        f"Required: {required_permission}, Reason: {reason}, "
-        f"IP: {request.remote_addr}, Path: {request.path}, Method: {request.method}"
+        f"403 AUTHORIZATION DENIED - User: {safe_user_id}, Resource: {safe_resource}, "
+        f"Required: {safe_permission}, Reason: {safe_reason}, "
+        f"IP: {log_data['request_remote_addr']}, "
+        f"Path: {log_data['request_path']}, Method: {log_data['request_method']}"
     )
     
-    # Also log as structured JSON for easier parsing
-    logger.info(f"403_ERROR_DETAILS: {log_data}")
+    # Log as structured JSON (already sanitized)
+    logger.info(f"403_ERROR_DETAILS: {json.dumps(log_data)}")
+
 
 
 def require_permission(permission):
