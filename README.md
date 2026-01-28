@@ -1,15 +1,15 @@
 # test1
 
-## About
-This is a test repository for demonstration and testing purposes.
+## Acerca de
+Este es un repositorio de prueba para propósitos de demostración y testing.
 
-## Recent Updates
-- Update made by branch feature-branch-8
+## Actualizaciones Recientes
+- Actualización realizada por la rama feature-branch-8
 
-## Features
-- Test functionality
-- Mergeable branches support
-- Collaborative development testing
+## Características
+- Funcionalidad de prueba
+- Soporte para ramas fusionables
+- Pruebas de desarrollo colaborativo
 
-## Status
-- Current status: Active testing
+## Estado
+- Estado actual: Testing activo
