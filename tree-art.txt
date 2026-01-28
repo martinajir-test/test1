@@ -1,0 +1,14 @@
+# ASCII Art of a Tree
+# This file contains an ASCII art drawing of a tree with a trunk and branches.
+
+       *
+      ***
+     *****
+    *******
+   *********
+  ***********
+ *************
+***************
+      |||
+      |||
+      |||
