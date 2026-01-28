@@ -1,14 +1,8 @@
-# ASCII Art of a Tree
-# This file contains an ASCII art drawing of a tree with a trunk and branches.
+# ASCII Art of an Animal
+# This file contains an ASCII art drawing of a cat.
 
-       *
-      ***
-     *****
-    *******
-   *********
-  ***********
- *************
-***************
-      |||
-      |||
-      |||
+    /\_/\
+   ( o.o )
+    > ^ <
+   /|   |\
+  (_|   |_)
