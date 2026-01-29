@@ -26,7 +26,7 @@ We welcome contributions to help translate this documentation into more language
 2. **Create a new file** in the `docs/` directory named `README.[language-code].md` (e.g., `README.de.md` for German)
 3. **Translate the content** from one of the existing language files (we recommend using `README.en.md` as the source)
 4. **Add your language** to the language selection section at the top of this README:
-   - Add a badge: `[![lang-code](https://img.shields.io/badge/lang-code-color.svg)](docs/README.[language-code].md)`
+   - Add a badge: `[![de](https://img.shields.io/badge/lang-de-green.svg)](docs/README.de.md)` (replace `de` and `green` with your language code and color)
    - Add a link in the "Available Languages" section
 5. **Submit a pull request** with your translation
 
