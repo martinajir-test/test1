@@ -78,10 +78,10 @@ Ce dépôt sert de modèle et d'exemple pour implémenter une documentation mult
 Nous accueillons les contributions ! Voici comment vous pouvez aider :
 
 1. **Forkez** le dépôt
-2. **Créez** une nouvelle branche (`git checkout -b feature/amelioration`)
+2. **Créez** une nouvelle branche (`git checkout -b feature/amélioration`)
 3. **Effectuez** vos modifications
 4. **Committez** vos modifications (`git commit -m 'Ajouter une amélioration'`)
-5. **Poussez** vers la branche (`git push origin feature/amelioration`)
+5. **Poussez** vers la branche (`git push origin feature/amélioration`)
 6. **Ouvrez** une Pull Request
 
 Pour les contributions de traduction, veuillez vous référer à la section [Contribuer des Traductions](../README.md#contributing-translations) dans le README principal.
