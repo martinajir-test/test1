@@ -10,6 +10,39 @@ mergeable
 test
 asdfasf
 
+## Development
+
+### Getting Started
+
+To get started with this repository:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/martinajir-test/test1.git
+   cd test1
+   ```
+
+2. **Make your changes**
+   - Edit files as needed
+   - Follow the existing code style
+
+3. **Commit your changes**
+   ```bash
+   git add .
+   git commit -m "Description of your changes"
+   ```
+
+4. **Push to your branch**
+   ```bash
+   git push origin your-branch-name
+   ```
+
+### Contributing
+
+- Create a new branch for each feature or bug fix
+- Write clear commit messages
+- Submit a pull request with a description of your changes
+
 ## ASCII Art
 
 ```
