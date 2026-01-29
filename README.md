@@ -1,8 +1,14 @@
 # Test1 Repository
 
-[![en](https://img.shields.io/badge/lang-en-blue.svg)](docs/README.en.md)
-[![es](https://img.shields.io/badge/lang-es-yellow.svg)](docs/README.es.md)
-[![fr](https://img.shields.io/badge/lang-fr-red.svg)](docs/README.fr.md)
+<div align="center">
+  <img src="https://via.placeholder.com/800x200/4A90E2/FFFFFF?text=Test1+Multi-Language+Documentation" alt="Test1 Banner" />
+  
+  <p><strong>A modern multi-language documentation system for global accessibility</strong></p>
+  
+  [![en](https://img.shields.io/badge/lang-en-blue.svg)](docs/README.en.md)
+  [![es](https://img.shields.io/badge/lang-es-yellow.svg)](docs/README.es.md)
+  [![fr](https://img.shields.io/badge/lang-fr-red.svg)](docs/README.fr.md)
+</div>
 
 ## 🌍 Available Languages / Idiomas Disponibles / Langues Disponibles
 
@@ -12,11 +18,23 @@
 
 ## 📖 About This Project
 
+<div align="center">
+  <img src="https://via.placeholder.com/600x300/50C878/FFFFFF?text=Multilingual+Documentation+Made+Easy" alt="Project Overview" />
+</div>
+
+<br/>
+
 This is the Test1 repository. For detailed documentation in your preferred language, please select one of the language options above.
 
 ---
 
 ## 🤝 Contributing Translations
+
+<div align="center">
+  <img src="https://via.placeholder.com/700x250/FF6B6B/FFFFFF?text=Help+Us+Translate!" alt="Contributing" />
+</div>
+
+<br/>
 
 We welcome contributions to help translate this documentation into more languages! Here's how you can help:
 

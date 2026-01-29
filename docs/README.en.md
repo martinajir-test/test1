@@ -1,5 +1,11 @@
 # Test1 Repository
 
+<div align="center">
+  <img src="https://via.placeholder.com/800x200/4A90E2/FFFFFF?text=Test1+Documentation" alt="Test1 Banner" />
+  
+  <p><strong>Multi-language documentation made simple</strong></p>
+</div>
+
 [🏠 Main README](../README.md) | [Español](README.es.md) | [Français](README.fr.md)
 
 ## 📋 Table of Contents
@@ -16,9 +22,21 @@
 
 ## 🎯 About
 
+<div align="center">
+  <img src="https://via.placeholder.com/600x250/9B59B6/FFFFFF?text=About+Test1" alt="About" />
+</div>
+
+<br/>
+
 Test1 is a sample repository demonstrating multi-language documentation support. This project showcases how to organize and maintain documentation in multiple languages, making your project accessible to a global audience.
 
 ## ✨ Features
+
+<div align="center">
+  <img src="https://via.placeholder.com/650x280/3498DB/FFFFFF?text=Key+Features" alt="Features" />
+</div>
+
+<br/>
 
 - **Multi-language Support**: Documentation available in English, Spanish, and French
 - **Easy Navigation**: Quick language switching with badges and links

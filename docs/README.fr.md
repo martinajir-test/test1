@@ -1,5 +1,11 @@
 # Dépôt Test1
 
+<div align="center">
+  <img src="https://via.placeholder.com/800x200/4A90E2/FFFFFF?text=Test1+Documentation" alt="Bannière Test1" />
+  
+  <p><strong>Documentation multilingue simplifiée</strong></p>
+</div>
+
 [🏠 README Principal](../README.md) | [English](README.en.md) | [Español](README.es.md)
 
 ## 📋 Table des Matières
@@ -16,9 +22,21 @@
 
 ## 🎯 À Propos
 
+<div align="center">
+  <img src="https://via.placeholder.com/600x250/9B59B6/FFFFFF?text=À+Propos+de+Test1" alt="À Propos" />
+</div>
+
+<br/>
+
 Test1 est un dépôt d'exemple démontrant le support de documentation multilingue. Ce projet montre comment organiser et maintenir la documentation dans plusieurs langues, rendant votre projet accessible à un public mondial.
 
 ## ✨ Fonctionnalités
+
+<div align="center">
+  <img src="https://via.placeholder.com/650x280/3498DB/FFFFFF?text=Fonctionnalités+Principales" alt="Fonctionnalités" />
+</div>
+
+<br/>
 
 - **Support Multilingue**: Documentation disponible en anglais, espagnol et français
 - **Navigation Facile**: Changement de langue rapide avec badges et liens
