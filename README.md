@@ -1,11 +1,25 @@
-test
-# Update made by branch feature-branch-8
+# test1
 
-test
+A test repository for demonstration purposes.
 
+## Overview
 
-mergeable
+This repository contains test files and configurations.
 
+## Contents
 
-test
-asdfasf
+- `README.md` - This file
+- `test.md` - Additional test documentation
+
+## Getting Started
+
+This is a simple test repository. Clone it to explore:
+
+```bash
+git clone https://github.com/martinajir-test/test1.git
+cd test1
+```
+
+## License
+
+This is a test repository.
