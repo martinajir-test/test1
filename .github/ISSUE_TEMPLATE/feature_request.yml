@@ -15,7 +15,10 @@ body:
     attributes:
       label: Is your feature request related to a problem? Please describe.
       description: A clear and concise description of what the problem is.
-      placeholder: e.g. "I'm always frustrated when [...]"
+      placeholder: |
+        - Problem: ...
+        - Impact: ...
+        - Context: ...
     validations:
       required: true
   - type: textarea
@@ -23,7 +26,10 @@ body:
     attributes:
       label: Describe the solution you'd like
       description: A clear and concise description of what you want to happen.
-      placeholder: Describe the feature or improvement you would like to see.
+      placeholder: |
+        - Main feature: ...
+        - How it should work: ...
+        - Expected outcome: ...
     validations:
       required: true
   - type: textarea
@@ -31,7 +37,10 @@ body:
     attributes:
       label: Describe alternatives you've considered
       description: A clear and concise description of any alternative solutions or features you've considered.
-      placeholder: What other approaches have you thought about?
+      placeholder: |
+        - Alternative 1: ...
+        - Alternative 2: ...
+        - Why you prefer your proposed solution: ...
     validations:
       required: true
   - type: textarea
@@ -39,6 +48,9 @@ body:
     attributes:
       label: Additional context
       description: Add any other context or screenshots about the feature request here.
-      placeholder: Any additional information, screenshots, or links that may help.
+      placeholder: |
+        - Screenshot: ...
+        - Reference: ...
+        - Other notes: ...
     validations:
       required: false
