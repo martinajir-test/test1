@@ -3,6 +3,7 @@ test
 
 test
 
+<!-- I am a thread - This is a comment added to the README -->
 
 mergeable
 
