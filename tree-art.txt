@@ -1,0 +1,8 @@
+# ASCII Art of an Animal
+# This file contains an ASCII art drawing of a cat.
+
+    /\_/\
+   ( o.o )
+    > ^ <
+   /|   |\
+  (_|   |_)
