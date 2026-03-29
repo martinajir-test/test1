@@ -1,11 +1,15 @@
-test
-# Update made by branch feature-branch-8
+# test1
 
-test
+## Acerca de
+Este es un repositorio de prueba para propósitos de demostración y pruebas.
 
+## Actualizaciones Recientes
+- Actualización realizada por la rama feature-branch-8
 
-mergeable
+## Características
+- Funcionalidad de prueba
+- Soporte para ramas fusionables
+- Pruebas de desarrollo colaborativo
 
-
-test
-asdfasf
+## Estado
+- Estado actual: Pruebas activas
