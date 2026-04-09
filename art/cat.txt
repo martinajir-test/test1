@@ -1,0 +1,9 @@
+# ASCII Art: Cat
+# A friendly cat illustration in ASCII art.
+
+      /\_/\
+     ( o.o )
+      > ^ <
+     /|   |\
+    (_|   |_)
+       " "
