@@ -7,7 +7,7 @@ Brief description of the project and its purpose.
 Before you begin, ensure you have the following installed:
 
 - Git
-- The project runtime and minimum supported version (for example: Node.js, Python, Java, or Go)
+- The project runtime and minimum supported version (replace this with an explicit requirement such as `Node.js 18+` or `Python 3.11+`)
 - The corresponding package manager (for example: npm, pip, Maven, or Go modules)
 
 ## Installation
@@ -24,7 +24,7 @@ Replace `<repository-url>` and `<repository-folder>` with your actual repository
 Install dependencies using your project’s package manager:
 
 ```bash
-# examples
+# replace with your project's install command
 npm install
 # or
 pip install -r requirements.txt
@@ -51,7 +51,7 @@ pip install -r requirements.txt
 Start the application locally:
 
 ```bash
-# examples
+# replace with your project's run command
 npm run dev
 # or
 python main.py
@@ -62,7 +62,7 @@ python main.py
 If test tooling is configured, run tests with your project command:
 
 ```bash
-# examples
+# replace with your project's test command
 npm test
 # or
 pytest
