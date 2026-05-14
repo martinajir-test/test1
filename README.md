@@ -8,6 +8,6 @@ mergeable
 
 
 test
-asdfasf
+example
 test
 test
