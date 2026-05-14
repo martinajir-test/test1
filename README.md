@@ -7,8 +7,8 @@ Brief description of the project and its purpose.
 Before you begin, ensure you have the following installed:
 
 - Git
-- A recent version of your language/runtime (for example: Node.js, Python, Java, or Go)
-- Your package manager/tooling for this project
+- The project runtime and minimum supported version (for example: Node.js, Python, Java, or Go)
+- The corresponding package manager (for example: npm, pip, Maven, or Go modules)
 
 ## Installation
 
@@ -18,6 +18,8 @@ Clone the repository and enter the project directory:
 git clone <repository-url>
 cd <repository-folder>
 ```
+
+Replace `<repository-url>` and `<repository-folder>` with your actual repository details.
 
 Install dependencies using your project’s package manager:
 
